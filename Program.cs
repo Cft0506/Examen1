@@ -10,8 +10,8 @@ do
     Console.WriteLine("[3]. Calcular la suma de los primeros 100 números naturales");
     Console.WriteLine("[4]. Imprimir todos los números desde 1 hasta el número ingresado");
     Console.WriteLine("[5]. Calcular el área de un círculo");
-    Console.WriteLine("[6]. Mostrar los elementos de un arreglo");
-    Console.WriteLine("[7]. Mostrar nombres de personas en una lista");
+    Console.WriteLine("[6]. Mostrar 10 elementos numéricos en un arreglo");
+    Console.WriteLine("[7]. Mostrar 5 nombres Bíblicos de personas en una lista");
     Console.WriteLine("[8]. Salir");
 
     // Leer la opción del usuario
@@ -36,18 +36,16 @@ do
         case 5:
             CalcularAreaCirculo();
             break;
-            //case 6:
-            //    MostrarElementosArreglo();
-            //    break;
-            //case 7:
-            //    MostrarNombresLista();
-            //    break;
-            //case 8:
-            //    Console.WriteLine("Saliendo del programa...");
-            //    break;
-            //default:
-            //    Console.WriteLine("Opción no válida. Intente nuevamente.");
-            //    break;
+        case 6:
+            ElementosArreglo();
+            break;
+        case 7:
+            NombresLista();
+            break;
+        case 8:
+            Console.WriteLine("Salio del programa...");
+            break;
+
     }
 
     Console.WriteLine("\n Presione cualquier tecla para continuar...");
@@ -113,7 +111,10 @@ void diaSemana()
         case 7:
             Console.WriteLine("Ingreso el dia domingo");
             break;
-        }
+        default:
+            Console.WriteLine("Ingreso un numero de [1-7]");
+            break;
+    }
        
 }
 
@@ -140,6 +141,7 @@ void RecorridoNumero()
     }
 }
 
+//Opcion 5
 double CalcularAreaCirculo()
 {
     double radio;
@@ -153,4 +155,30 @@ double CalcularAreaCirculo()
     Console.WriteLine("El área del círculo es: " + area);
 
     return area;
+}
+
+//Opcion 6
+void ElementosArreglo()
+{
+    // Arreglo predefinido
+    int[] numeros = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    Console.WriteLine("Elementos del arreglo:");
+    foreach (int numero in numeros)
+    {
+        Console.WriteLine(numero);
+    }
+}
+
+//Opcion 7
+void NombresLista()
+{
+    // Lista predefinida
+    List<string> nombres = new List<string>() { "Jesus", "Jose", "María", "Pedro", "Judas" };
+
+    Console.WriteLine("Nombres de personas en la lista:");
+    foreach (string nombre in nombres)
+    {
+        Console.WriteLine(nombre);
+    }
 }
